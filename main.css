@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+}
+
+.container {
+    margin: 3% 5% 3% 5%;
+}
+
+html {
+    background-color: #393e46;
+    overflow: auto;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eeeeee;
+}
+
+nav {
+    position: fixed;
+}
+
+span {
+    display: inline-block;
+    white-space: pre-wrap;
+    background-color: #222831;
+    color: #00adb5;
+}
+
+code {
+    background-color: #222831;
+    color: #00adb5;
+}
+
+pre {
+    background-color: #222831;
+}
+
+.comment {
+    color: rgb(203, 197, 255);
+}
+
+.color-purple {
+    color: rgb(51, 3, 49)
+}
+
+.color-green {
+    display: inline;
+    color: rgb(168, 255, 168)
+}
+
+.color-red {
+    color: rgb(148, 36, 73);
+}
+
+.color-orange {
+    color: rgb(255, 203, 106)
+}
+
+.color-blue {
+    color: rgb(0, 195, 255)
+}
+
+header,
+h1 {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+section header {
+    margin: 0.5rem;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    background-color: rgb(148, 36, 73);
+    display: inline-block;
+}
+
+
+section li,
+h2,
+p,
+pre {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    line-height: 1.4rem;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+.blink {
+    animation: blink-anim 1s linear infinite;
+}
+
+
+.typewriter{
+    visibility: 1;
+    opacity: 1;
+}
+.typewriter:after {
+    content: "|";
+    color: whitesmoke;
+    animation: blink-anim 0.7s linear infinite alternate;
+}
+@keyframes blink-anim {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* for media qu in pre add     white-space: normal; */
