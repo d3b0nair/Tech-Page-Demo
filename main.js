@@ -78,26 +78,24 @@ async function listnerAction() {
     let placeHolder = document.querySelectorAll('.placeHolder');
     let checkDublicates = document.querySelectorAll('.typewriter');
     //removing placeholders
-    for (let x = 0, len1 = placeHolder.length - 1; x < len1; x++) {
-        if (checkViewPort(placeHolder[x])) {
-            placeHolder[x].classList.add("hidden");
-            console.log(`x ${x}, len ${len1}`);
-        }
-
-    }
-    //replacing the placeholders with actual content
-    for (let i = 0, len2 = codeSection.length - 1; i < len2; i++) {
-        if (checkViewPort(codeSection[i]) && !checkDublicates[i]) {
-            codeSection[i].classList.add("typewriter");
+    for (let x = 0, len1 = placeHolder.length; x < len1; x++) {
+        if (checkViewPort(codeSection[x]) && !checkDublicates[x] && checkViewPort(placeHolder[x])) {
+            codeSection[x].classList.add("typewriter");
             typingAnimElem = document.querySelectorAll('.typewriter');
-            typingAnimation(typingAnimElem[i]);
-            codeSection[i].classList.remove("hidden");
+            typingAnimation(typingAnimElem[x]);
+            placeHolder[x].classList.add("hidden");
+            codeSection[x].classList.remove("hidden");
+            
 
         }
-    }
 
+    }
 
 }
+
+
+
+
 
 //setting up listner
 let timeout = 0;
