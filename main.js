@@ -1,7 +1,6 @@
 /* to-do:
-implement listener to track users location,
 implement nav bar carousel 
-maybe try to creater code playground*/
+*/
 
 //checking if element is visible
 function checkViewPort(el) {
@@ -14,94 +13,96 @@ function checkViewPort(el) {
 
     );
 }
+
 //appending innerHTML with content
 async function typingAnimation(el) {
-        let HTML = el.innerHTML; //copying given element's content
-        let size = HTML.length;
-        el.innerHTML = ""; //erasing that content. We work with innerHTML because its checks style, which we need for this project
-        let tag = "", //we will need this 3 following variables to seperate tags from displaying us them to user upon adding content
-            writingTag = false,
-            tagOpen = false,
-            typeSpeed = 5, // base speed of typing
-            tempTypeSpeed = 5; // we will use this variable make typing look more humanlike
-        for (let x = 0; x < size; x++) {
-            setTimeout(() => {
-                if (writingTag === true) {
-                    tag += HTML[x];
-                }
-                if (HTML[x] === "<") {
-                    tempTypeSpeed = 0;
-                    if (tagOpen) {
-                        tagOpen = false;
-                        writingTag = true;
-                    } else {
-                        tag = "";
-                        tagOpen = true;
-                        writingTag = true;
-                        tag += HTML[x];
-                    }
-                }
 
-                if (!writingTag && tagOpen) {
-                    tag.innerHTML += HTML[x];
-                }
-
-                if (!writingTag && !tagOpen) {
-                    if (HTML[x] === " ") {
-                        tempTypeSpeed = 0;
-                    } else {
-                        tempTypeSpeed = (Math.random() * typeSpeed) + 35;
-                    }
-                    el.innerHTML += HTML[x];
-                }
-                if (writingTag === true && HTML[x] === ">") {
-                    tempTypeSpeed = (Math.random() * typeSpeed) + 35;
-                    writingTag = false;
-                    if (tagOpen) {
-                        let newSpan = document.createElement("span");
-                        el.appendChild(newSpan);
-                        newSpan.innerHTML = tag;
-                        tag = newSpan.firstChild;
-                    }
-
-                }
-            }, tempTypeSpeed += (Math.random() * typeSpeed) + 25);
+    // initializing variables
+    let HTML = el.innerHTML;
+    el.innerHTML = "";
+    let tag = "",
+        writingTag = false,
+        tagOpen = false,
+        delay = 1;
+    //function itself
+    let typing = function (x) {
+        if (writingTag === true) {
+            tag += HTML[x];
         }
+        if (HTML[x] === "<") {
+            switch (tagOpen) {
+                case true:
+                    tagOpen = false;
+                    writingTag = true;
+                    break;
+                default:
+                    tag = "";
+                    tagOpen = true;
+                    writingTag = true;
+                    tag += HTML[x];
+                    break;
+            }
+        }
+
+        if (!writingTag && tagOpen) {
+            tag.innerHTML += HTML[x];
+        }
+
+        if (!writingTag && !tagOpen) {
+            el.innerHTML += HTML[x];
+        }
+        if (writingTag === true && HTML[x] === ">") {
+            writingTag = false;
+            switch (tagOpen) {
+                case true:
+                    let newSpan = document.createElement("span");
+                    el.appendChild(newSpan);
+                    newSpan.innerHTML = tag;
+                    tag = newSpan.firstChild;
+                    break;
+            }
+
+        }
+    }
+    // iteration for each character
+    for (let x = 0; x < HTML.length; x++) {
+        setTimeout(() => {
+            typing(x);
+        }, delay += 40);
+    }
 }
-var test = 0;
 
 //listnener handler
 async function listnerAction() {
-    const pre = document.querySelectorAll('pre');
-    for (let i = 0; i < pre.length; i++) {
-        if (checkViewPort(pre[i])) {
-        pre[i].classList.add("typewriter");}
+    let codeSection = document.querySelectorAll('.hidden');
+    let placeHolder = document.querySelectorAll('.placeHolder');
+    let checkDublicates = document.querySelectorAll('.typewriter');
+    //removing placeholders
+    for (let x = 0, len1 = placeHolder.length - 1; x < len1; x++) {
+        if (checkViewPort(placeHolder[x])) {
+            placeHolder[x].classList.add("hidden");
+            console.log(`x ${x}, len ${len1}`);
+        }
+
     }
-    typingAnimElem = document.querySelectorAll('.typewriter');
-    if (test<typingAnimElem.length-1){
-        await typingAnimation(typingAnimElem[test]);
-        test +=1 ;
+    //replacing the placeholders with actual content
+    for (let i = 0, len2 = codeSection.length - 1; i < len2; i++) {
+        if (checkViewPort(codeSection[i]) && !checkDublicates[i]) {
+            codeSection[i].classList.add("typewriter");
+            typingAnimElem = document.querySelectorAll('.typewriter');
+            typingAnimation(typingAnimElem[i]);
+            codeSection[i].classList.remove("hidden");
+
+        }
     }
 
-    /*
-    for (let i = 0; i < pre.length; i++) {
-        if ((pre[i].classList.contains("typewriter")) == false) {
-            if (checkViewPort(pre[i])) {
-                pre[i].classList.add("typewriter");
-                typingAnimElem = document.querySelectorAll('.typewriter');
-                setTimeout(() => {
-                await typingAnimation(typingAnimElem[i]);
-            }, timeout += (Math.random() * timeout) + 25);
-            }
-        }
-    }*/
+
 }
 
 //setting up listner
+let timeout = 0;
 document.addEventListener('scroll', () => {
-    let timeout = 100;
     setTimeout(() => {
-    listnerAction(); //checking if elements for typing are visible for user}//checking if typing animation is busy
-}, timeout += (Math.random() * timeout) + 25);
-console.log(timeout);
+        listnerAction();
+    }, timeout += 5);
 });

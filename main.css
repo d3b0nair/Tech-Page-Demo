@@ -38,6 +38,7 @@ code {
 }
 
 pre {
+
     background-color: #222831;
 }
 
@@ -78,7 +79,10 @@ section header {
     background-color: rgb(148, 36, 73);
     display: inline-block;
 }
+.hidden{
 
+    display: none;
+}
 
 section li,
 h2,

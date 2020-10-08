@@ -12,16 +12,16 @@
         <header>Array in Javascript<h1 class="blink">|</h1>
         </header>
         <ul>
-            <li><a class="nav-link" href="#Description">Description</a></li>
-            <li><a class="nav-link" href="#Common_operations">Common operations</a>
+            <li><a class="nav-link" onclick="listnerAction()" href="#Description">Description</a></li>
+            <li><a class="nav-link" onclick="listnerAction()" href="#Common_operations">Common operations</a>
             </li>
-            <li><a class="nav-link" href="#Accessing_array_elements">Accessing array elements</a>
+            <li><a class="nav-link" onclick="listnerAction()" href="#Accessing_array_elements">Accessing array elements</a>
             </li>
-            <li><a class="nav-link" href="#Relationship_between_length_and_numerical_properties">Relationship between
+            <li><a class="nav-link" onclick="listnerAction()" href="#Relationship_between_length_and_numerical_properties">Relationship between
                     length and numerical properties</a>
 
             </li>
-            <li><a class="nav-link" href="#Creating_an_array_using_the_result_of_a_match">Creating an array using the
+            <li><a class="nav-link" onclick="listnerAction()" href="#Creating_an_array_using_the_result_of_a_match">Creating an array using the
                     result of a match</a>
             </li>
             <ul>
@@ -72,20 +72,23 @@
                     <li>Create an Array</li>
                 </h3>
 
-                <code><pre><span class="color-blue">let</span> <span class="color-orange">fruits</span> = <span class="color-green"> ['Apple', 'Banana']</span>
-<span class="color-red">console</span>.<span class="color-blue">log</span>(<span class="color-orange">fruits.length</span>)
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span class="color-blue">let</span> <span class="color-orange">fruits</span> <span>=</span> <span class="color-green"> ['Apple', 'Banana']</span>
+<span class="color-red">console</span><span>.</span><span class="color-blue">log</span><span>(</span><span class="color-orange">fruits.length</span><span>)</span>
 <span class="comment">// 2</span></pre></code>
                 <h3>
                     <li>Access an Array item using the index position </li>
                 </h3>
-                <code><pre><span>let first = fruits[0]</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span>let first = fruits[0]</span>
 <span class="comment">// Apple</span>
 <span>let last = fruits[fruits.length - 1]</span>
 <span class="comment">// Banana</span></pre></code>
                 <h3>
                     <li>Loop over an Array</li>
                 </h3>
-                <code><pre><span>fruits.forEach(function(item, index, array) {</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span>fruits.forEach(function(item, index, array) {</span>
 <span>console.log(item, index)</span>
 <span>})</span>
 <span class="comment">// Apple 0</span>
@@ -95,21 +98,22 @@
 
                     </li>
                 </h3>
-                <code><pre><span>let newLength = fruits.push('Orange')</span>
-<span><span class="comment">// ["Apple", "Banana", "Orange"]</span></pre></code>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span>let newLength = fruits.push('Orange')</span>
+<span class="comment">// ["Apple", "Banana", "Orange"]</span></pre></code>
                 <h3>
                     <li>Remove an item from the end of an Array
 
                     </li>
                 </h3>
-                <code><pre><span>let last = fruits.pop() </span><span class="comment">// remove Orange (from the end)</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let last = fruits.pop() </span><span class="comment">// remove Orange (from the end)</span>
 <span class="comment">// ["Apple", "Banana"]</span></pre></code>
                 <h3>
                     <li>Add an item to the beginning of an Array
 
                     </li>
                 </h3>
-                <code><pre><span>let newLength = fruits.unshift('Strawberry') </span><span class="comment">// add to the front</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let newLength = fruits.unshift('Strawberry') </span><span class="comment">// add to the front</span>
 <span class="comment">// ["Strawberry", "Banana"]</span></pre></code>
                 <h3>
                     <li>Find the index of an item in the Array
@@ -117,22 +121,22 @@
                     </li>
                 </h3>
                 <code>
-<pre><span>fruits.push('Mango')</span><span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
+<pre class="hidden"><span>fruits.push('Mango')</span><span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
 <span>let pos = fruits.indexOf('Banana')</span>
-</span><span class="comment">// 1</span></pre></code>
+<span class="comment">// 1</span></pre></code>
                 <h3>
                     <li>Remove an item by index position
 
                     </li>
                 </h3>
-                <code><pre><span>let removedItem = fruits.splice(pos, 1) </span><span class="comment">// this is how to remove an item</span>
-</span><span class="comment">// ["Strawberry", "Mango"]</span></pre></code>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let removedItem = fruits.splice(pos, 1) </span><span class="comment">// this is how to remove an item</span>
+<span class="comment">// ["Strawberry", "Mango"]</span></pre></code>
                 <h3>
                     <li>Remove items from an index position
 
                     </li>
                 </h3>
-                <code><pre><span>let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
 <span>console.log(vegetables)</span>
 <span class="comment">// ["Cabbage", "Turnip", "Radish", "Carrot"]</span>
 
@@ -153,7 +157,7 @@
 
                     </li>
                 </h3>
-                <code><pre><span>let shallowCopy = fruits.slice()</span><span class="comment">// this is how to make a copy</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let shallowCopy = fruits.slice()</span><span class="comment">// this is how to make a copy</span>
 <span class="comment">// ["Strawberry", "Mango"]</span></pre></code>
             </section>
             <section id="Accessing_array_elements" class="main-section">
@@ -167,7 +171,8 @@
                     minus <code>1</code>.
 
                     Using an invalid index number returns <code>undefined</code>.</p>
-                <code><pre><span>let arr = ['this is the first element', 'this is the second element', 'this is the last element']
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span>let arr = ['this is the first element', 'this is the second element', 'this is the last element']</span>
 <span>console.log(arr[0])</span> <span class="comment">// logs 'this is the first element'</span>
 <span>console.log(arr[1])</span> <span class="comment">// logs 'this is the second element'</span>
 <span>console.log(arr[arr.length - 1])</span><span class="comment">// logs 'this is the last element'</span></pre></code>
@@ -178,7 +183,8 @@
                     array as
                     follows
                     throws a syntax error because the property name is not valid:</p>
-                <code><pre><span>console.log(arr.0)</span><span class="comment">// a syntax error</span></pre></code>
+                <code
+                    class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>console.log(arr.0)</span><span class="comment">// a syntax error</span></pre></code>
                 <p>There is nothing special about JavaScript arrays and the properties that cause this. JavaScript
                     properties that begin with a digit cannot be referenced with dot notation and must be accessed
                     using
@@ -188,10 +194,11 @@
                 <p>For example, if you had an object with a property named 3d, it can only be referenced using
                     bracket
                     notation.</p>
-                <code><pre><span>let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]</span>
 <span>console.log(years.0)  </span><span class="comment">// a syntax error</span>
 <span>console.log(years[0]) </span><span class="comment">// works properly</span></pre></code>
-                <code><pre><span>renderer.3d.setTexture(model, 'character.png')    </span><span class="comment">// a syntax error</span>
+                <code
+                    class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>renderer.3d.setTexture(model, 'character.png')    </span><span class="comment">// a syntax error</span>
 <span>renderer['3d'].setTexture(model, 'character.png') </span><span class="comment">// works properly</span></pre></code>
                 <p>In the <code>3d</code> example, <code>'3d'</code> had to be quoted (because it begins with a
                     digit). But
@@ -206,7 +213,8 @@
                     slots on
                     the years object, and the
                     following example could be <code>true</code>:</p>
-                <code><pre><span>console.log(years['2'] != years['02'])</span></pre></code>
+                <code
+                    class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>console.log(years['2'] != years['02'])</span></pre></code>
             </section>
             <section id="Relationship_between_length_and_numerical_properties" class="main-section">
                 <header>
@@ -217,7 +225,7 @@
                     <code>indexOf()</code>, etc.) take into account the value of an array's length property when
                     they're
                     called.</p>
-                <code><pre><span>const fruits = []</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>const fruits = []</span>
 <span>fruits.push('banana', 'apple', 'peach')</span>
 
 <span>console.log(fruits.length)</span><span class="comment">// 3</span></pre></code>
@@ -226,14 +234,14 @@
                     outside the current bounds of the array, the engine will update the array's <code>length</code>
                     property
                     accordingly:</p>
-                <code><pre><span>fruits[5] = 'mango'</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>fruits[5] = 'mango'</span>
 <span>console.log(fruits[5]) </span><span class="comment">// 'mango'</span>
 <span>console.log(Object.keys(fruits)) </span><span class="comment">// ['0', '1', '2', '5']</span>
 <span>console.log(fruits.length) </span><span class="comment">// 6</span></pre></code>
                 <p>Increasing the <code>length</code>.
 
                 </p>
-                <code><pre><span>fruits.length = 10</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>fruits.length = 10</span>
 <span>console.log(fruits)             </span><span class="comment">// ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]</span>
 <span>console.log(Object.keys(fruits))</span><span class="comment">// ['0', '1', '2', '5']</span>
 <span>console.log(fruits.length)      </span><span class="comment">// 10</span>
@@ -241,7 +249,7 @@
                 <p>Decreasing the <code>length</code> property does, however, delete elements.
 
                 </p>
-                <code><pre><span>fruits.length = 2</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>fruits.length = 2</span>
 <span>console.log(Object.keys(fruits))</span><span class="comment">// ['0', '1']</span>
 <span>console.log(fruits.length)      </span><span class="comment">// 2</span></pre></code>
                 <p>This is explained further on the Array.length page.
@@ -257,7 +265,8 @@
                     <code>RegExp.exec()</code>, <code>String.match()</code>, and <code>String.replace()</code>.</p>
                 <p>To help explain these properties and elements, see this example and then refer to the table
                     below:</p>
-                <code><pre><span class="comment">// Match one d followed by one or more b's followed by one d</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span class="comment">// Match one d followed by one or more b's followed by one d</span>
 <span class="comment">// Remember matched b's and the following d</span>
 <span class="comment">// Ignore case</span>
 
@@ -270,7 +279,6 @@
                     <div class="grid-item-row">Description</div>
                     <div class="grid-item-row">Example</div>
                 </div>
-                <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 
             </section>
