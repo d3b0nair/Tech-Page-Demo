@@ -2,19 +2,22 @@
 implement nav bar carousel 
 */
 
-//checking if element is visible
+// Checking if element is visible
 function checkViewPort(el) {
-    const check = el.getBoundingClientRect();
-    return (
-        check.top >= 0 &&
-        check.left >= 0 &&
-        check.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        check.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-    );
+    if (el.classList.contains("hidden")){
+        return false;
+    }
+    else{
+        const check = el.getBoundingClientRect();
+        return (
+            check.top >= 0 &&
+            check.left >= 0 &&
+            check.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            check.right <= (window.innerWidth || document.documentElement.clientWidth)
+    
+        );
+    }
 }
-
-//appending innerHTML with content
 async function typingAnimation(el) {
 
     // initializing variables
@@ -23,8 +26,8 @@ async function typingAnimation(el) {
     let tag = "",
         writingTag = false,
         tagOpen = false,
-        delay = 1;
-    //function itself
+        interval = 1; 
+    // function itself
     let typing = function (x) {
         if (writingTag === true) {
             tag += HTML[x];
@@ -68,21 +71,19 @@ async function typingAnimation(el) {
     for (let x = 0; x < HTML.length; x++) {
         setTimeout(() => {
             typing(x);
-        }, delay += 40);
+        }, interval += 40);
     }
 }
 
-//listnener handler
-async function listnerAction() {
+// listener handler
+async function listenerAction() {    
     let codeSection = document.querySelectorAll('.hidden');
     let placeHolder = document.querySelectorAll('.placeHolder');
-    let checkDublicates = document.querySelectorAll('.typewriter');
-    //removing placeholders
+    // removing placeholders
     for (let x = 0, len1 = placeHolder.length; x < len1; x++) {
-        if (checkViewPort(codeSection[x]) && !checkDublicates[x] && checkViewPort(placeHolder[x])) {
+        if (!checkViewPort(codeSection[x]) && checkViewPort(placeHolder[x])) { //checkViewPort(codeSection[x]) returns false if element is hidden
             codeSection[x].classList.add("typewriter");
-            typingAnimElem = document.querySelectorAll('.typewriter');
-            typingAnimation(typingAnimElem[x]);
+            typingAnimation(codeSection[x]);
             placeHolder[x].classList.add("hidden");
             codeSection[x].classList.remove("hidden");
             
@@ -97,10 +98,10 @@ async function listnerAction() {
 
 
 
-//setting up listner
+// setting up listner
 let timeout = 0;
 document.addEventListener('scroll', () => {
     setTimeout(() => {
-        listnerAction();
+        listenerAction();
     }, timeout += 5);
 });

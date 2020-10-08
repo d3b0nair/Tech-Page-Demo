@@ -19,14 +19,45 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     color: #eeeeee;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: green;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    transform: translate(-50%, -50%);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 nav {
     position: fixed;
-    bottom: 0;
-    margin-left: 40%;
-    margin-right: 40%;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
 }
 
 span {
@@ -83,7 +114,8 @@ section header {
     background-color: rgb(148, 36, 73);
     display: inline-block;
 }
-.hidden{
+
+.hidden {
 
     display: none;
 }
@@ -107,23 +139,26 @@ li {
 }
 
 
-.typewriter{
+.typewriter {
     visibility: 1;
     opacity: 1;
 }
+
 .typewriter:after {
     content: "|";
     color: whitesmoke;
     animation: blink-anim 0.7s linear infinite alternate;
 }
+
 @keyframes blink-anim {
     50% {
         opacity: 0;
     }
 }
+
 /* for media qu in pre add     white-space: normal; */
 @media only screen and (max-width: 768px) {
     pre {
         white-space: normal;
     }
-  }
+}

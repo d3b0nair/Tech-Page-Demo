@@ -12,16 +12,16 @@
         <header>Array in Javascript<h1 class="blink">|</h1>
         </header>
         <ul>
-            <li><a class="nav-link" onclick="listnerAction()" href="#Description">Description</a></li>
-            <li><a class="nav-link" onclick="listnerAction()" href="#Common_operations">Common operations</a>
+            <li><a class="nav-link" href="#Description">Description</a></li>
+            <li><a class="nav-link" href="#Common_operations">Common operations</a>
             </li>
-            <li><a class="nav-link" onclick="listnerAction()" href="#Accessing_array_elements">Accessing array elements</a>
+            <li><a class="nav-link" href="#Accessing_array_elements">Accessing array elements</a>
             </li>
-            <li><a class="nav-link" onclick="listnerAction()" href="#Relationship_between_length_and_numerical_properties">Relationship between
+            <li><a class="nav-link" href="#Relationship_between_length_and_numerical_properties">Relationship between
                     length and numerical properties</a>
 
             </li>
-            <li><a class="nav-link" onclick="listnerAction()" href="#Creating_an_array_using_the_result_of_a_match">Creating an array using the
+            <li><a class="nav-link" href="#Creating_an_array_using_the_result_of_a_match">Creating an array using the
                     result of a match</a>
             </li>
             <ul>
@@ -248,7 +248,8 @@
                 <p>Decreasing the <code>length</code> property does, however, delete elements.
 
                 </p>
-                <code class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span>fruits.length = 2</span>
+                <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <code><pre class="hidden"><span>fruits.length = 2</span>
 <span>console.log(Object.keys(fruits))</span><span class="comment">// ['0', '1']</span>
 <span>console.log(fruits.length)      </span><span class="comment">// 2</span></pre></code>
                 <p>This is explained further on the Array.length page.
@@ -268,7 +269,6 @@
                 <code><pre class="hidden"><span class="comment">// Match one d followed by one or more b's followed by one d</span>
 <span class="comment">// Remember matched b's and the following d</span>
 <span class="comment">// Ignore case</span>
-
 <span>const myRe = /d(b+)(d)/i</span>
 <span>const myArray = myRe.exec('cdbBdbsbz')</span></pre></code>
                 <p>The properties and elements returned from this match are as follows:
