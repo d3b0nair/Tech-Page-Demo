@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
 }
 
 .container {
@@ -30,41 +34,58 @@ html {
     transform: translate(-50%, -50%);
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
     background: gainsboro;
     border-radius: 5px;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 5px;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
+header {
+font-size: 1.5rem;
+}
 nav {
+    background-color: rgb(148, 36, 73);
     position: fixed;
-    bottom: -5%;
+    top: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+nav ul {
     text-align: center;
 }
 
 nav ul li {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    white-space: nowrap;
 }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li:hover {
+    background: #00adb5;
+  }
 
 span {
-    display: inline-block;
     white-space: pre-wrap;
     background-color: #222831;
-    color: #00adb5;
+}
+
+.code-container {
+    word-wrap: break-word;
 }
 
 code {
@@ -72,8 +93,11 @@ code {
     color: #00adb5;
 }
 
-pre {
+.code-container code {
+    color: white;
+}
 
+pre {
     background-color: #222831;
 }
 
@@ -82,12 +106,12 @@ pre {
 }
 
 .color-purple {
-    color: rgb(51, 3, 49)
+    color: rgb(51, 3, 49);
 }
 
 .color-green {
     display: inline;
-    color: rgb(168, 255, 168)
+    color: rgb(168, 255, 168);
 }
 
 .color-red {
@@ -95,15 +119,23 @@ pre {
 }
 
 .color-orange {
-    color: rgb(255, 203, 106)
+    color: rgb(255, 203, 106);
 }
 
 .color-blue {
-    color: rgb(0, 195, 255)
+    color: rgb(0, 195, 255);
 }
 
-header,
-h1 {
+.color-dark-blue {
+    color: rgb(0, 109, 233);
+}
+
+.color-white {
+    color: rgb(231, 230, 230)
+}
+
+section header,
+section h1 {
     display: inline-block;
     font-size: 1.5rem;
 }
@@ -156,9 +188,16 @@ li {
     }
 }
 
-/* for media qu in pre add     white-space: normal; */
 @media only screen and (max-width: 768px) {
     pre {
         white-space: normal;
+    }
+
+    nav {
+        top: 80%;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        text-align: center;
     }
 }
