@@ -1,5 +1,5 @@
 /* to-do:
-implement nav bar carousel 
+-Navbar response to users postion, therefore if user viewport is at section X then the corresponding X will be hovered inside the navbar a.k.a tracking users positon
 */
 
 // Checking if element is visible

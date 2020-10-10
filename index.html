@@ -7,34 +7,38 @@
     <link rel="stylesheet" href="main.css">
     <title>Array in Javascript</title>
 </head>
-<header>
-    <nav id="navbar">
-        <header>Array in Javascript<h1 class="blink">|</h1>
-        </header>
-        <ul>
-            <li><a class="nav-link" href="#Description">Description</a></li>
-            <li><a class="nav-link" href="#Common_operations">Common operations</a>
-            </li>
-            <li><a class="nav-link" href="#Accessing_array_elements">Accessing array elements</a>
-            </li>
-            <li><a class="nav-link" href="#Relationship_between_length_and_numerical_properties">Relationship between
-                    length and numerical properties</a>
-
-            </li>
-            <li><a class="nav-link" href="#Creating_an_array_using_the_result_of_a_match">Creating an array using the
-                    result of a match</a>
-            </li>
-            <ul>
-            </ul>
-    </nav>
-</header>
 
 <body>
+    <header>
+
+        <nav id="navbar">
+            <img id="logo" src="icon_js.svg" alt="javascript icon">
+            <header>Array in Javascript</header>
+            <div id="nav-menu">
+                <ul>
+                    <li><a class="nav-link" href="#Description">Description</a></li>
+                    <li><a class="nav-link" href="#Common_operations">Common operations</a>
+                    </li>
+                    <li><a class="nav-link" href="#Accessing_array_elements">Accessing array elements</a>
+                    </li>
+                    <li><a class="nav-link" href="#Relationship_between_length_and_numerical_properties">Relationship
+                            between
+                            length and numerical properties</a>
+
+                    </li>
+                    <li><a class="nav-link" href="#Creating_an_array_using_the_result_of_a_match">Creating an array
+                            using the
+                            result of a match</a>
+                    </li>
+                    <ul>
+            </div>
+        </nav>
+    </header>
     <main id="main-doc">
         <div class="container">
             <section id="Description" class="main-section">
                 <header>
-                    <h1 class="blink">></h1> Description
+                    Description<img src="icon_box.svg" alt="box icon" class="icon">
                 </header>
                 <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation
                     operations.
@@ -66,30 +70,30 @@
             </section>
             <section id="Common_operations" class="main-section">
                 <header>
-                    <h1 class="blink">></h1> Common operations
+                    Common operations<img src="icon_box.svg" alt="box icon" class="icon">
                 </header>
                 <h3>
-                    <li>Create an Array</li>
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Create an Array</li>
                 </h3>
 
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">fruits</span> =  [<span class="color-green">'Apple'</span>, <span class="color-green">'Banana'</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-orange">fruits.length</span>)
 <span class="comment">// 2</span></pre></code></div>
                 <h3>
-                    <li>Access an Array item using the index position </li>
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Access an Array item using the index position </li>
                 </h3>
 
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">first</span> = <span class="color-blue">fruits</span>[<span class="color-red">0</span>]
 <span class="comment">// Apple</span>
 <span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>[<span class="color-blue">fruits</span>.<span class="color-orange">length</span> - <span class="color-red">1</span>]
 <span class="comment">// Banana</span></pre></code></div>
                 <h3>
-                    <li>Loop over an Array</li>
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Loop over an Array</li>
                 </h3>
                 <div class="code-container">
-                    <code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                    <code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">forEach</span>(<span class="color-dark-blue">function</span>(<span class="color-blue">item, index, array</span>) {
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-orange">item, index</span>)
 <span>})</span>
@@ -97,53 +101,48 @@
 <span class="comment">// Banana 1</span></pre></code>
                 </div>
                 <h3>
-                    <li>Add an item to the end of an Array
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Add an item to the end of an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'blue'</span>)
 <span class="comment">// ["Apple", "Banana", "blue"]</span></pre></code></div>
                 <h3>
-                    <li>Remove an item from the end of an Array
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Remove an item from the end of an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>.<span class="color-orange">pop()</span> <span class="comment">// remove blue (from the end)</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>.<span class="color-orange">pop()</span> <span class="comment">// remove blue (from the end)</span>
 <span class="comment">// ["Apple", "Banana"]</span></pre></code></div>
                 <h3>
                     <li>Add an item to the beginning of an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">unshift</span>(<span class="color-green">'Strawberry'</span>) <span class="comment">// add to the front</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">unshift</span>(<span class="color-green">'Strawberry'</span>) <span class="comment">// add to the front</span>
 <span class="comment">// ["Strawberry", "Banana"]</span></pre></code></div>
                 <h3>
-                    <li>Find the index of an item in the Array
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Find the index of an item in the Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'Mango'</span>)<span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'Mango'</span>)<span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
 <span class="color-dark-blue">let</span> <span class="color-blue">pos</span> = <span class="color-blue">fruits</span>.<span class="color-orange">indexOf</span>(<span class="color-green">'Banana'</span>)
 <span class="comment">// 1</span></pre></code></div>
                 <h3>
-                    <li>Remove an item by index position
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Remove an item by index position
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">removedItem</span> = <span class="color-blue">fruits</span>.<span class="color-orange">splice</span>(<span class="color-blue">pos</span>, <span class="color-red">1</span>) <span class="comment">// this is how to remove an item</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">removedItem</span> = <span class="color-blue">fruits</span>.<span class="color-orange">splice</span>(<span class="color-blue">pos</span>, <span class="color-red">1</span>) <span class="comment">// this is how to remove an item</span>
 <span class="comment">// ["Strawberry", "Mango"]</span></pre></code></div>
                 <h3>
-                    <li>Remove items from an index position
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Remove items from an index position
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">vegetables</span> = <span class="color-green">['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">vegetables</span> = <span class="color-green">['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">vegetables</span>)
 <span class="comment">// ["Cabbage", "Turnip", "Radish", "Carrot"]</span>
 
@@ -160,17 +159,16 @@
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">removedItems</span>)
 <span class="comment">// ["Turnip", "Radish"]</span></pre></code></div>
                 <h3>
-                    <li>Copy an Array
+                    <li><img src="icon_code.svg" alt="code icon" class="icon">Copy an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">shallowCopy</span> = <span class="color-blue">fruits</span>.<span class="color-orange">slice</span>()<span class="comment">// this is how to make a copy</span>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">shallowCopy</span> = <span class="color-blue">fruits</span>.<span class="color-orange">slice</span>()<span class="comment">// this is how to make a copy</span>
 <span class="comment">// ["Strawberry", "Mango"]</span></pre></code></div>
             </section>
             <section id="Accessing_array_elements" class="main-section">
                 <header>
-                    <h1 class="blink">></h1> Accessing array elements
+                    Accessing array elements <img src="icon_box.svg" alt="box icon" class="icon">
                 </header>
                 <p>JavaScript arrays are zero-indexed. The first element of an array is at index <code>0</code>, and
                     the
@@ -179,7 +177,7 @@
                     minus <code>1</code>.
 
                     Using an invalid index number returns <code>undefined</code>.</p>
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">arr</span> = [<span class="color-green">'this is the first element'</span>, <span class="color-green">'this is the second element'</span>, <span class="color-green">'this is the last element'</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>[<span class="color-red">0</span>]) <span class="comment">// logs 'this is the first element'</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>[<span class="color-red">1</span>]) <span class="comment">// logs 'this is the second element'</span>
@@ -193,7 +191,7 @@
                     follows
                     throws a syntax error because the property name is not valid:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>.<span class="color-red">0</span>)<span class="comment">// a syntax error</span></pre></code>
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>.<span class="color-red">0</span>)<span class="comment">// a syntax error</span></pre></code>
                 </div>
                 <p>There is nothing special about JavaScript arrays and the properties that cause this. JavaScript
                     properties that begin with a digit cannot be referenced with dot notation and must be accessed
@@ -205,12 +203,12 @@
                     bracket
                     notation.</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">years</span> = [<span class="color-red">1950</span>, <span class="color-red">1960</span>, <span class="color-red">1970</span>, <span class="color-red">1980</span>, <span class="color-red">1990</span>, <span class="color-red">2000</span>, <span class="color-red">2010</span>]
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">years</span> = [<span class="color-red">1950</span>, <span class="color-red">1960</span>, <span class="color-red">1970</span>, <span class="color-red">1980</span>, <span class="color-red">1990</span>, <span class="color-red">2000</span>, <span class="color-red">2010</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>.<span class="color-red">0</span>)  <span class="comment">// a syntax error</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-red">0</span>])<span class="comment">// works properly</span></pre></code>
                 </div>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-blue">renderer</span>.<span class="color-blue">3rd</span>.<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>)    <span class="comment">// a syntax error</span>
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">renderer</span>.<span class="color-blue">3rd</span>.<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>)    <span class="comment">// a syntax error</span>
 <span class="color-blue">renderer</span>[<span class="color-green">'3d'</span>].<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>) <span class="comment">// works properly</span></pre></code>
                 </div>
                 <p>In the <code>3d</code> example, <code>'3d'</code> had to be quoted (because it begins with a
@@ -227,12 +225,12 @@
                     the years object, and the
                     following example could be <code>true</code>:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-green">'2'</span>] != <span class="color-blue">years</span>[<span class="color-green">'02'</span>])</pre></code>
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-green">'2'</span>] != <span class="color-blue">years</span>[<span class="color-green">'02'</span>])</pre></code>
                 </div>
             </section>
             <section id="Relationship_between_length_and_numerical_properties" class="main-section">
                 <header>
-                    <h1 class="blink">></h1> Relationship between length and numerical properties
+                    Relationship between length and numerical properties<img src="icon_box.svg" alt="box icon" class="icon">
                 </header>
                 <p>A JavaScript array's <code>length</code> property and numerical properties are connected.</p>
                 <p>Several of the built-in array methods (e.g., <code>join()</code>, <code>slice()</code>,
@@ -240,7 +238,7 @@
                     they're
                     called.</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-dark-blue">const</span> <span class="color-blue">fruits</span> = []
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">const</span> <span class="color-blue">fruits</span> = []
 <span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'banana'</span>, <span class="color-green">'apple'</span>, <span class="color-green">'peach'</span>)
 
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">fruits</span>.<span class="color-orange">length</span>)<span class="comment">// 3</span></pre></code>
@@ -251,7 +249,7 @@
                     property
                     accordingly:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>[<span class="color-red">5</span>] = <span class="color-green">'mango'</span>
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>[<span class="color-red">5</span>] = <span class="color-green">'mango'</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>[<span class="color-red">5</span>]) <span class="comment">// 'mango'</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class="color-orange">keys</span>(<span class="color-blue">fruits</span>)) <span class="comment">// ['0', '1', '2', '5']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class="color-orange">length</span>) <span class="comment">// 6</span></pre></code>
@@ -260,7 +258,7 @@
 
                 </p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre><span class="blink">|</span></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">10</span>
+                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">10</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>)             <span class="comment">// ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class ="color-orange">keys</span>(<span class="color-blue">fruits</span>))<span class="comment">// ['0', '1', '2', '5']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class ="color-orange">length</span>)      <span class="comment">// 10</span>
@@ -269,7 +267,7 @@
                 <p>Decreasing the <code>length</code> property does, however, delete elements.
 
                 </p>
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">2</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class ="color-orange">keys</span>(<span class="color-blue">fruits</span>))<span class="comment">// ['0', '1']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class ="color-orange">length</span>)      <span class="comment">// 2</span></pre></code>
@@ -280,14 +278,14 @@
             </section>
             <section id="Creating_an_array_using_the_result_of_a_match" class="main-section">
                 <header>
-                    <h1 class="blink">></h1> Creating an array using the result of a match
+                    Creating an array using the result of a match<img src="icon_box.svg" alt="box icon" class="icon">
                 </header>
                 <p>The result of a match between a RegExp and a string can create a JavaScript array. This array has
                     properties and elements which provide information about the match. Such an array is returned by
                     <code>RegExp.exec()</code>, <code>String.match()</code>, and <code>String.replace()</code>.</p>
                 <p>To help explain these properties and elements, see this example and then refer to the table
                     below:</p>
-                <div class="code-container"><code class="placeHolder"><pre><span class="blink">|</span></pre></code>
+                <div class="code-container"><code class="placeHolder"><pre></pre></code>
                     <code><pre class="hidden"><span class="comment">// Match one d followed by one or more b's followed by one d</span>
 <span class="comment">// Remember matched b's and the following d</span>
 <span class="comment">// Ignore case</span>
@@ -299,6 +297,7 @@
         </div>
     </main>
     <script src="main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
