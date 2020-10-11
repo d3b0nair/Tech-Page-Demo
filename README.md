@@ -1,6 +1,6 @@
 # Tech-Page-Demo
 
-## Live Version: @ [Netlify](https://wizardly-heyrovsky-b1e314.netlify.app/) :heart:
+## Live Version: @ [GitHub](https://d3b0nair.github.io/Tech-Page-Demo/index.html) :heart:
 
 This project features:
 
