@@ -268,9 +268,6 @@ pre:after {
 }
 /*  Responsive Media Queries  */
 @media only screen and (max-width: 768px) {
-    pre {
-        white-space: normal;
-    }
 
     nav {
         height: 40%;
