@@ -30,7 +30,7 @@
                             using the
                             result of a match</a>
                     </li>
-                    <ul>
+                </ul>
             </div>
         </nav>
     </header>
@@ -76,16 +76,16 @@
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Create an Array</li>
                 </h3>
 
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">fruits</span> =  [<span class="color-green">'Apple'</span>, <span class="color-green">'Banana'</span>]
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">fruits</span> =  [<span class="color-green">'Apple'</span>, <span class="color-green">'Banana'</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-orange">fruits.length</span>)
 <span class="comment">// 2</span></pre></code></div>
                 <h3>
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Access an Array item using the index position </li>
                 </h3>
 
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">first</span> = <span class="color-blue">fruits</span>[<span class="color-red">0</span>]
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">first</span> = <span class="color-blue">fruits</span>[<span class="color-red">0</span>]
 <span class="comment">// Apple</span>
 <span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>[<span class="color-blue">fruits</span>.<span class="color-orange">length</span> - <span class="color-red">1</span>]
 <span class="comment">// Banana</span></pre></code></div>
@@ -93,8 +93,8 @@
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Loop over an Array</li>
                 </h3>
                 <div class="code-container">
-                    <code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">forEach</span>(<span class="color-dark-blue">function</span>(<span class="color-blue">item, index, array</span>) {
+                    <code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-blue">fruits</span>.<span class="color-orange">forEach</span>(<span class="color-dark-blue">function</span>(<span class="color-blue">item, index, array</span>) {
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-orange">item, index</span>)
 <span>})</span>
 <span class="comment">// Apple 0</span>
@@ -105,29 +105,29 @@
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'blue'</span>)
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'blue'</span>)
 <span class="comment">// ["Apple", "Banana", "blue"]</span></pre></code></div>
                 <h3>
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Remove an item from the end of an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>.<span class="color-orange">pop()</span> <span class="comment">// remove blue (from the end)</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">last</span> = <span class="color-blue">fruits</span>.<span class="color-orange">pop()</span> <span class="comment">// remove blue (from the end)</span>
 <span class="comment">// ["Apple", "Banana"]</span></pre></code></div>
                 <h3>
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Add an item to the beginning of an Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">unshift</span>(<span class="color-green">'Strawberry'</span>) <span class="comment">// add to the front</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">newLength</span> = <span class="color-blue">fruits</span>.<span class="color-orange">unshift</span>(<span class="color-green">'Strawberry'</span>) <span class="comment">// add to the front</span>
 <span class="comment">// ["Strawberry", "Banana"]</span></pre></code></div>
                 <h3>
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Find the index of an item in the Array
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'Mango'</span>)<span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'Mango'</span>)<span class="comment">// ["Strawberry", "Banana", "Mango"]</span>
 <span class="color-dark-blue">let</span> <span class="color-blue">pos</span> = <span class="color-blue">fruits</span>.<span class="color-orange">indexOf</span>(<span class="color-green">'Banana'</span>)
 <span class="comment">// 1</span></pre></code></div>
                 <h3>
@@ -135,14 +135,14 @@
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">removedItem</span> = <span class="color-blue">fruits</span>.<span class="color-orange">splice</span>(<span class="color-blue">pos</span>, <span class="color-red">1</span>) <span class="comment">// this is how to remove an item</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">removedItem</span> = <span class="color-blue">fruits</span>.<span class="color-orange">splice</span>(<span class="color-blue">pos</span>, <span class="color-red">1</span>) <span class="comment">// this is how to remove an item</span>
 <span class="comment">// ["Strawberry", "Mango"]</span></pre></code></div>
                 <h3>
                     <li><img src="icon_code.svg" alt="code icon" class="icon">Remove items from an index position
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">vegetables</span> = <span class="color-green">['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">vegetables</span> = <span class="color-green">['Cabbage', 'Turnip', 'Radish', 'Carrot']</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">vegetables</span>)
 <span class="comment">// ["Cabbage", "Turnip", "Radish", "Carrot"]</span>
 
@@ -163,7 +163,7 @@
 
                     </li>
                 </h3>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">shallowCopy</span> = <span class="color-blue">fruits</span>.<span class="color-orange">slice</span>()<span class="comment">// this is how to make a copy</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">shallowCopy</span> = <span class="color-blue">fruits</span>.<span class="color-orange">slice</span>()<span class="comment">// this is how to make a copy</span>
 <span class="comment">// ["Strawberry", "Mango"]</span></pre></code></div>
             </section>
             <section id="Accessing_array_elements" class="main-section">
@@ -177,8 +177,8 @@
                     minus <code>1</code>.
 
                     Using an invalid index number returns <code>undefined</code>.</p>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">arr</span> = [<span class="color-green">'this is the first element'</span>, <span class="color-green">'this is the second element'</span>, <span class="color-green">'this is the last element'</span>]
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">arr</span> = [<span class="color-green">'this is the first element'</span>, <span class="color-green">'this is the second element'</span>, <span class="color-green">'this is the last element'</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>[<span class="color-red">0</span>]) <span class="comment">// logs 'this is the first element'</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>[<span class="color-red">1</span>]) <span class="comment">// logs 'this is the second element'</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>[<span class="color-blue">arr</span>.<span class="color-orange">length</span> - <span class="color-red">1</span>])<span class="comment">// logs 'this is the last element'</span></pre></code>
@@ -191,7 +191,7 @@
                     follows
                     throws a syntax error because the property name is not valid:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>.<span class="color-red">0</span>)<span class="comment">// a syntax error</span></pre></code>
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">arr</span>.<span class="color-red">0</span>)<span class="comment">// a syntax error</span></pre></code>
                 </div>
                 <p>There is nothing special about JavaScript arrays and the properties that cause this. JavaScript
                     properties that begin with a digit cannot be referenced with dot notation and must be accessed
@@ -203,12 +203,12 @@
                     bracket
                     notation.</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">let</span> <span class="color-blue">years</span> = [<span class="color-red">1950</span>, <span class="color-red">1960</span>, <span class="color-red">1970</span>, <span class="color-red">1980</span>, <span class="color-red">1990</span>, <span class="color-red">2000</span>, <span class="color-red">2010</span>]
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">let</span> <span class="color-blue">years</span> = [<span class="color-red">1950</span>, <span class="color-red">1960</span>, <span class="color-red">1970</span>, <span class="color-red">1980</span>, <span class="color-red">1990</span>, <span class="color-red">2000</span>, <span class="color-red">2010</span>]
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>.<span class="color-red">0</span>)  <span class="comment">// a syntax error</span>
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-red">0</span>])<span class="comment">// works properly</span></pre></code>
                 </div>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">renderer</span>.<span class="color-blue">3rd</span>.<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>)    <span class="comment">// a syntax error</span>
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-blue">renderer</span>.<span class="color-blue">3rd</span>.<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>)    <span class="comment">// a syntax error</span>
 <span class="color-blue">renderer</span>[<span class="color-green">'3d'</span>].<span class="color-orange">setTexture</span>(<span class="color-blue">model</span>, <span class="color-green">'character.png'</span>) <span class="comment">// works properly</span></pre></code>
                 </div>
                 <p>In the <code>3d</code> example, <code>'3d'</code> had to be quoted (because it begins with a
@@ -225,7 +225,7 @@
                     the years object, and the
                     following example could be <code>true</code>:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-green">'2'</span>] != <span class="color-blue">years</span>[<span class="color-green">'02'</span>])</pre></code>
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">years</span>[<span class="color-green">'2'</span>] != <span class="color-blue">years</span>[<span class="color-green">'02'</span>])</pre></code>
                 </div>
             </section>
             <section id="Relationship_between_length_and_numerical_properties" class="main-section">
@@ -238,7 +238,7 @@
                     they're
                     called.</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-dark-blue">const</span> <span class="color-blue">fruits</span> = []
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-dark-blue">const</span> <span class="color-blue">fruits</span> = []
 <span class="color-blue">fruits</span>.<span class="color-orange">push</span>(<span class="color-green">'banana'</span>, <span class="color-green">'apple'</span>, <span class="color-green">'peach'</span>)
 
 <span class="color-red">console</span>.<span class="color-dark-blue">log</span>(<span class="color-blue">fruits</span>.<span class="color-orange">length</span>)<span class="comment">// 3</span></pre></code>
@@ -249,7 +249,7 @@
                     property
                     accordingly:</p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>[<span class="color-red">5</span>] = <span class="color-green">'mango'</span>
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-blue">fruits</span>[<span class="color-red">5</span>] = <span class="color-green">'mango'</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>[<span class="color-red">5</span>]) <span class="comment">// 'mango'</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class="color-orange">keys</span>(<span class="color-blue">fruits</span>)) <span class="comment">// ['0', '1', '2', '5']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class="color-orange">length</span>) <span class="comment">// 6</span></pre></code>
@@ -258,7 +258,7 @@
 
                 </p>
                 <div class="code-container"><code
-                        class="placeHolder"><pre></pre></code><code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">10</span>
+                        class="placeHolder"><pre class="preBlink"></pre></code><code><pre class="hidden" contenteditable="true"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">10</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>)             <span class="comment">// ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class ="color-orange">keys</span>(<span class="color-blue">fruits</span>))<span class="comment">// ['0', '1', '2', '5']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class ="color-orange">length</span>)      <span class="comment">// 10</span>
@@ -267,8 +267,8 @@
                 <p>Decreasing the <code>length</code> property does, however, delete elements.
 
                 </p>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">2</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="color-blue">fruits</span>.<span class="color-orange">length</span> = <span class="color-red">2</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">Object</span>.<span class ="color-orange">keys</span>(<span class="color-blue">fruits</span>))<span class="comment">// ['0', '1']</span>
 <span class="color-red">console</span>.<span class="color-blue">log</span>(<span class ="color-blue">fruits</span>.<span class ="color-orange">length</span>)      <span class="comment">// 2</span></pre></code>
                 </div>
@@ -285,8 +285,8 @@
                     <code>RegExp.exec()</code>, <code>String.match()</code>, and <code>String.replace()</code>.</p>
                 <p>To help explain these properties and elements, see this example and then refer to the table
                     below:</p>
-                <div class="code-container"><code class="placeHolder"><pre></pre></code>
-                    <code><pre class="hidden"><span class="comment">// Match one d followed by one or more b's followed by one d</span>
+                <div class="code-container"><code class="placeHolder"><pre class="preBlink"></pre></code>
+                    <code><pre class="hidden" contenteditable="true"><span class="comment">// Match one d followed by one or more b's followed by one d</span>
 <span class="comment">// Remember matched b's and the following d</span>
 <span class="comment">// Ignore case</span>
 <span class="color-dark-blue">const</span> <span class="color-blue">myRe</span> = <span class="color-orange">/d(b+)(d)/i</span>

@@ -4,17 +4,16 @@
 
 // Checking if element is visible
 function checkViewPort(el) {
-    if (el.classList.contains("hidden")){
+    if (el.classList.contains("hidden")) {
         return false;
-    }
-    else{
+    } else {
         const check = el.getBoundingClientRect();
         return (
             check.top >= 0 &&
             check.left >= 0 &&
             check.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             check.right <= (window.innerWidth || document.documentElement.clientWidth)
-    
+
         );
     }
 }
@@ -26,7 +25,7 @@ async function typingAnimation(el) {
     let tag = "",
         writingTag = false,
         tagOpen = false,
-        interval = 1; 
+        interval = 1;
     // function itself
     let typing = function (x) {
         if (writingTag === true) {
@@ -73,10 +72,13 @@ async function typingAnimation(el) {
             typing(x);
         }, interval += 40);
     }
+    setTimeout(() => {
+    el.classList.remove("typewriter");
+}, interval += 40);
 }
 
 // listener handler
-async function listenerAction() {    
+async function listenerAction() {
     let codeSection = document.querySelectorAll('.hidden');
     let placeHolder = document.querySelectorAll('.placeHolder');
     // removing placeholders
@@ -86,7 +88,7 @@ async function listenerAction() {
             typingAnimation(codeSection[x]);
             placeHolder[x].classList.add("hidden");
             codeSection[x].classList.remove("hidden");
-            
+
 
         }
 
