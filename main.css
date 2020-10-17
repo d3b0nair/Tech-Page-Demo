@@ -296,6 +296,9 @@ pre {
     #main-doc {
         margin-left: 0;
     }
+    section #Creating_an_array_using_the_result_of_a_match {
+    margin-bottom: 12rem;
+    }
     section header, section h1 {
         font-size:1.3rem;
     }
