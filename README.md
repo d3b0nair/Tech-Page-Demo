@@ -1,6 +1,6 @@
 # Tech-Page-Demo
 
-## Live Version: @ [Heroku](https://evening-inlet-33347.herokuapp.com/) :heart:
+## Live Version: @ [GitHub](https://d3b0nair.github.io/Tech-Page-Demo/) :heart:
 
 This project features:
 
